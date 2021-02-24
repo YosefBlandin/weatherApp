@@ -1,0 +1,26 @@
+
+# Created by https://www.toptal.com/developers/gitignore/api/react,java-web
+# Edit at https://www.toptal.com/developers/gitignore?templates=react,java-web
+
+### Java-Web ###
+## ignoring target file
+target/
+
+### react ###
+.vscode
+.DS_*
+*.log
+logs
+**/*.backup.*
+**/*.back.*
+
+node_modules
+bower_components
+
+*.sublime*
+
+psd
+thumb
+sketch
+
+# End of https://www.toptal.com/developers/gitignore/api/react,java-web

@@ -1,0 +1,43 @@
+
+@keyframes searchMenu {
+    from {
+        transform: translateY(-200px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity:1;
+    }
+}
+
+.searchPlaces {
+    display: flex;
+    flex-direction: column;
+    min-height: 40vh;
+    width: 90vw;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    background: rgba(255,255,255, .9);
+    border-radius: 20px;
+    box-shadow: 0 0 20px 0 gray;
+    animation: 1s searchMenu forwards;
+
+    &__title {
+        font-size: 2rem;
+        font-weight: 900;
+        margin-bottom: 30px;
+    }
+    &__input {
+        padding: 10px;
+        border: 2px solid gray;
+        border-radius: 20px;
+        
+        transition: 1s;
+        &:hover {
+        outline-style: none;
+        border: 2px solid rgb(70, 69, 69);
+        transition: 1s;
+        }
+    }
+}

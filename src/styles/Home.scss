@@ -1,0 +1,30 @@
+@import './_animations';
+$font-color: #2d3436;
+body {
+    background-color: whitesmoke;
+    color: $font-color;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 80vh;
+    font-size: 1.2rem;
+    
+    animation: entry 0.8s;
+    &__temperature {
+        font-size: 4rem;
+    }
+    &__date {
+        text-align: center;
+        line-height: 2rem;
+    }
+    .main__weather {
+        font-weight: 900;
+        &::first-letter {
+            text-transform: uppercase;
+        }
+    }
+}

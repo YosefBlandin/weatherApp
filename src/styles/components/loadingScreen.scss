@@ -1,0 +1,18 @@
+@import "../animations";
+
+.loadingScreen {
+    position: relative ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    transition: 1s;
+    .loadingScreen__circle {
+        display: block;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background: #2d3436;
+        animation: 2.5s loading;
+    }
+}
