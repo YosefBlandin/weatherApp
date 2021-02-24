@@ -13,7 +13,7 @@ let today = new Date();
 
 
 function Home() {
-    const [loading, setLoading] = useState(false);
+    const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
     const [currentPosition, setCurrentPosition] = useState([]);
     let [timezone, setTimezone] = useState("");
