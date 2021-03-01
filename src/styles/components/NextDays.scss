@@ -1,0 +1,33 @@
+.NextDays {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding-top: 80px;
+    width: 100vw;
+    height: auto;
+    justify-content: center;
+    background-color: #000;
+    
+    .NextDays__item {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        align-items: center;
+        width: 320px;
+        height: 300px;
+        background-color:#1E213A;
+
+        img {
+            width: 100px;
+        }
+        img + p {
+            font-weight: bold;
+        }
+        div > p {
+            margin-top: 20px;
+        }
+    }
+}

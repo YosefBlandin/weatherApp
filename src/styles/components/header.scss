@@ -4,20 +4,24 @@ header {
     position: relative;
     display: flex;
     justify-content: space-between;
-    margin: 25px;
+    padding-left: 15px;
+    padding-top: 15px;
+    padding-right: 15px;
+    padding-bottom: 40px;
     height: auto;
     animation: entry 0.8s;
+    background-color: #1E213A;
     .header__places {
         z-index: 10;
         display: flex;
         align-items: center;
         justify-content: center;
-        padding: 15px;
+        width: 180px;
         color: whitesmoke;
-        font-weight: 700;
+        font-weight: 600;
         border: none;
-        background-color: #2d3436;
-        border-radius: 10px;
+        background-color: gray;
+        border-radius: 3px;
         cursor: pointer;
         transition: .5s;
         &:hover {
@@ -29,7 +33,7 @@ header {
         display: inline-block;
         width: 50px;
         height: 50px;
-        border: 5px solid #2d3436;
+        border: 5px solid whitesmoke;
         border-radius: 50%;
         background: transparent;
         animation: supreme 1s;

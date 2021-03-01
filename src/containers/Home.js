@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import Header from "../components/Header";
 import LoadingScreen from "../components/LoadingScreen";
-import WeatherIcons from "../components/WeatherIcons"
-
+import WeatherIcons from "../components/WeatherIcons";
+import NextDays from "../components/NextDays";
 
 import AlertGps from "../components/AlertGps";
 
@@ -20,7 +20,8 @@ function Home() {
     let [currentWeather, setCurrentWeather] = useState("");
     let [temperature, setTemperature] = useState(0);
 
-    const apiKey = "9169a92780b1d0a3183659fca9a43cf2";
+    const apiKey = "34b72b35d1bb464990570215212802";
+
 
     function successCallback({ coords }) {
         setCurrentPosition([coords.latitude, coords.longitude])
@@ -31,19 +32,20 @@ function Home() {
     }
 
     function GetData() {
-        fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${currentPosition[0]}&lon=${currentPosition[1]}&appid=${apiKey}`)
+        fetch(`http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${currentPosition[0]},${currentPosition[1]}`)
             .then(data => data.json())
             .then(data => {
-                setTemperature(Math.round(data.current.temp - 284))
-                setCurrentWeather(data.current.weather[0].description)
-                setTimezone(data.timezone)
+                setTemperature(Math.floor(data.current.temp_c))
+                setCurrentWeather(data.current.condition.text)
+                setTimezone(data.location.tz_id)
             })
             .catch(x => setError(x))
     }
 
     useEffect(() => {
-        setTimeout(() => setLoading(false), 2400)
-        GetLocation();
+        setTimeout(() => setLoading(false), 2400);
+        GetLocation()
+        currentPosition.length > 1 ? GetData() : false;
     })
     return (
         <>
@@ -52,19 +54,21 @@ function Home() {
                     <Header getData={() => GetData()} />
                     <main className="main">
 
-                        <section className="main__icon">
-                            <WeatherIcons weatherState={currentWeather} />
-                        </section>
+
+                        <WeatherIcons weatherState={currentWeather} />
+
 
                         <h3 className="main__temperature">{temperature}
                             <span className="main__degree">°C</span>
                         </h3>
-                        <p className="main__weather">{currentWeather}</p>
+                        <p className="main__weather">{currentWeather || "Weather State"}</p>
                         <div className="main__date">
                             <span>Today </span><br /> <span>{`${today.getDate()} : ${today.getMonth() + 1} : ${today.getFullYear()}`}</span>
                         </div>
-                        <p className="main__location"> {timezone}</p>
+
+                        <p className="main__timezone"> {timezone || "timezone"}</p>
                     </main>
+                    <NextDays latitude={currentPosition[0]} longitude={currentPosition[1]} />
                 </>) :
                 (<LoadingScreen />)}
             {

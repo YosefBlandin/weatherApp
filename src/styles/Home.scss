@@ -1,7 +1,6 @@
 @import './_animations';
-$font-color: #2d3436;
+$font-color: whitesmoke;
 body {
-    background-color: whitesmoke;
     color: $font-color;
 }
 
@@ -10,16 +9,23 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    height: 80vh;
+    height: 85vh;
     font-size: 1.2rem;
-    
     animation: entry 0.8s;
+    background-color: #1E213A;
+    padding-bottom: 50px;
+    &__icon {
+        width: 140px;
+    }
     &__temperature {
         font-size: 4rem;
     }
     &__date {
         text-align: center;
         line-height: 2rem;
+    }
+    &__timezone {
+        font-weight: bold;
     }
     .main__weather {
         font-weight: 900;

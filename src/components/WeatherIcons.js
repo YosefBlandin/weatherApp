@@ -1,13 +1,13 @@
 import React from "react";
-import { Sunny, Cloudy, Rain, Snow } from "weather-styled-icon";
+import Sunny from "../assets/icons/HeavyRain.png"
 
 let WeatherIcons = (weatherState) => {
     if (weatherState === "overcast clouds") {
-        return <Sunny />
+        return <img className="main__icon" src={Sunny} alt="Sunny" />
     } else if (weatherState === "broken clouds") {
-        return <Rain />
+        return <img className="main__icon" src={Sunny} alt="Sunny" />
     } else {
-        return <Sunny />
+        return <img className="main__icon" src={Sunny} alt="Sunny" />
     }
 }
 
