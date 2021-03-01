@@ -4,11 +4,9 @@ header {
     position: relative;
     display: flex;
     justify-content: space-between;
-    padding-left: 15px;
-    padding-top: 15px;
-    padding-right: 15px;
-    padding-bottom: 40px;
-    height: auto;
+    height: 100px;
+    padding: 20px;
+    width: 100%;
     animation: entry 0.8s;
     background-color: #1E213A;
     .header__places {
@@ -17,8 +15,10 @@ header {
         align-items: center;
         justify-content: center;
         width: 180px;
+        height: 50px;
         color: whitesmoke;
         font-weight: 600;
+        font-size: 1rem;
         border: none;
         background-color: gray;
         border-radius: 3px;

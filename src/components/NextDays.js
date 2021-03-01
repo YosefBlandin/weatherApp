@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "../styles/components/NextDays.scss";
+import "../styles/components/nextDays.scss";
 
 function NextDays({ latitude, longitude }) {
     const [dataApi, setDataApi] = useState([])

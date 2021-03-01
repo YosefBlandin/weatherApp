@@ -6,4 +6,114 @@
 html {
     font-family: sans-serif;
     
+    background-color: black;
+    
+}
+@media screen and (min-width: 900px) {
+    #root {
+        display: grid;
+        height: 100vh;
+        width: 100vw;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(2, 1fr) ;
+    }
+    header {
+        
+        margin-left: 40px;
+        margin-right: 40px ;
+    }
+    .main {
+        width: 100%;
+    }
+    .highlights__title {
+        text-align: center;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        padding-left: 40px;
+    }
+    .NextDays {
+        gap: 5px;
+        .NextDays__item {
+            width: 200px;
+            height: 280px;
+        }
+    }
+    .highlights {
+        .highlights__container {
+            gap: 5px;
+            .highlights__item {
+                width: 180px;
+                height: 200px;
+            }
+    }   }
+}
+@media screen and (min-width: 1200px) {
+    
+    .highlights__title {
+        text-align: center;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        padding-left: 40px;
+    }
+    .NextDays {
+        gap: 15px;
+        .NextDays__item {
+            width: 220px;
+            height: 280px;
+        }
+    }
+    .highlights {
+        .highlights__container {
+            gap: 15px;
+            .highlights__item {
+                width: 220px;
+                height: 280px;
+            }
+    }   }
+}
+@media screen and (min-width: 1350px) {
+    
+    .highlights__title {
+        padding-top: 20px;
+        padding-bottom: 60px;
+        padding-left: 40px;
+    }
+    .NextDays {
+        gap: 30px;
+        .NextDays__item {
+            width: 300px;
+            height: 280px;
+        }
+    }
+    .highlights {
+        .highlights__container {
+            gap: 30px;
+            .highlights__item {
+                width: 230px;
+                height: 260px;
+            }
+    }   }
+}
+@media screen and (min-width: 1400px) {
+    
+    .highlights__title {
+        padding-top: 20px;
+        padding-bottom: 60px;
+        padding-left: 60px;
+    }
+    .NextDays {
+        gap: 30px;
+        .NextDays__item {
+            width: 320px;
+            height: 300px;
+        }
+    }
+    .highlights {
+        .highlights__container {
+            gap: 30px;
+            .highlights__item {
+                width: 320px;
+                height: 300px;
+            }
+    }   }
 }
