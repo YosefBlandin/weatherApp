@@ -24,6 +24,7 @@ function Home() {
     let [humidity, setHumitidy] = useState(0);
     let [visibility, setVisibility] = useState(0);
     let [air_pressure, setAir_Presure] = useState(0);
+    let [city, setCity] = useState([]);
 
     const apiKey = "34b72b35d1bb464990570215212802";
 
@@ -37,6 +38,7 @@ function Home() {
     }
 
     function GetData() {
+
         fetch(`http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${currentPosition[0]},${currentPosition[1]}`)
             .then(data => data.json())
             .then(data => {
@@ -48,21 +50,29 @@ function Home() {
                 setVisibility(data.current.vis_km)
                 setAir_Presure(data.current.pressure_mb)
             })
+            .catch(x => setError(x));
+
+    }
+
+    let searchData = (value) => {
+        fetch(`http://api.weatherapi.com/v1/search.json?key=${apiKey}&q=${value}`)
+            .then(data => data.json())
+            .then(data => setCity(data))
             .catch(x => setError(x))
     }
 
     useEffect(() => {
         setTimeout(() => setLoading(false), 2400);
-        GetLocation()
-        currentPosition.length > 1 ? GetData() : false;
-    })
+        currentPosition.length <= 1 ? GetLocation() : false
+        currentPosition.length > 1 ? GetData() : false
+    }, [currentPosition])
     return (
         <>
             {loading === false ? (
                 <>
                     <main className="main">
 
-                        <Header getData={() => GetData()} />
+                        <Header getData={() => GetData()} searchData={searchData} city={city} />
 
                         <WeatherIcons weatherState={currentWeather} />
 

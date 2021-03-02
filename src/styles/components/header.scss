@@ -10,7 +10,6 @@ header {
     animation: entry 0.8s;
     background-color: #1E213A;
     .header__places {
-        z-index: 10;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -24,9 +23,56 @@ header {
         border-radius: 3px;
         cursor: pointer;
         transition: .5s;
+        div {
+            display: none;
+        }
+
         &:hover {
             transform: scale(1.05);
             transition: .5s;
+        }
+        &--active {
+            position: absolute;
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100px;
+            height: 50px;    
+            left: 70%;
+            font-weight: 600;
+            font-size: 1rem;
+            border-radius: 3px;
+            transition: .5s;
+            cursor: pointer;
+            .closes {
+                position: absolute;
+                display: inline-block;
+                top: 25px;
+                right: 0;
+                left: 30px;
+                bottom: 0;
+                width: 55px;
+                height: 1px;
+                border: 2px solid white;
+                cursor: pointer;
+                transition: 1s;
+                &__1 {
+                    animation: 2s closes1 forwards;
+                }
+                
+                &__2 {
+                    animation: 2s closes2 forwards;
+                }
+            }
+            
+            &:hover {
+                transform: scale(1.05);
+                transition: .5s;
+            }
+            span {
+                display: none;
+            }
         }
     }
     .header__location {

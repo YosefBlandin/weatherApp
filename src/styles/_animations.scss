@@ -86,3 +86,33 @@ $animationColor: whitesmoke;
         transform: rotate(-40deg)
     }
 }
+@keyframes closes1 {
+    0% {
+        transform: rotate(0);
+    }
+    50% {
+        transform: rotate(360deg);
+    }
+    90% {
+        box-shadow: 0 0 20px 5px darkorchid;
+    }
+    100% {
+        
+        transform: rotate(40deg)
+    }
+}
+@keyframes closes2 {
+    0% {
+        transform: rotate(0);
+    }
+    50% {
+        transform: rotate(-660deg);
+    }
+    90% {
+        box-shadow: 0 0 20px 5px darkblue;
+    }
+    100% {
+
+        transform: rotate(-40deg)
+    }
+}
