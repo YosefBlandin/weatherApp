@@ -17,6 +17,7 @@ function Home() {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
     const [currentPosition, setCurrentPosition] = useState([]);
+    let [icon, setIcon] = useState("");
     let [timezone, setTimezone] = useState("");
     let [currentWeather, setCurrentWeather] = useState("");
     let [temperature, setTemperature] = useState(0);
@@ -25,6 +26,7 @@ function Home() {
     let [visibility, setVisibility] = useState(0);
     let [air_pressure, setAir_Presure] = useState(0);
     let [city, setCity] = useState([]);
+
 
     const apiKey = "34b72b35d1bb464990570215212802";
 
@@ -43,6 +45,7 @@ function Home() {
             .then(data => {
                 setTemperature(Math.floor(data.current.temp_c))
                 setCurrentWeather(data.current.condition.text)
+                setIcon(data.current.condition.icon)
                 setTimezone(data.location.tz_id)
                 setWind(data.current.wind_mph)
                 setHumitidy(data.current.humidity)
@@ -74,7 +77,7 @@ function Home() {
 
                         <Header getLocation={GetLocation} searchData={searchData} city={city} setPosition={setCurrentPosition} />
 
-                        <WeatherIcons weatherState={currentWeather} />
+                        <WeatherIcons weatherState={icon} />
 
 
                         <h3 className="main__temperature">{temperature}
@@ -95,7 +98,7 @@ function Home() {
                         air_pressure={air_pressure}
                     />
                     <footer>
-                        <p>Yosef Blandin All Right's Reserved</p>
+                        <p>Yosef Blandin All Rights Reserved</p>
                     </footer>
                 </>) :
                 (<LoadingScreen />)}

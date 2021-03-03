@@ -1,3 +1,4 @@
+@import "./animations";
 * {
     box-sizing: border-box;
     margin: 0;
@@ -106,6 +107,7 @@ html {
         .NextDays__item {
             width: 320px;
             height: 300px;
+            animation: 1s entry;
         }
     }
     .highlights {
@@ -114,6 +116,7 @@ html {
             .highlights__item {
                 width: 320px;
                 height: 300px;
+                animation: 1s entry;
             }
     }   }
 }
