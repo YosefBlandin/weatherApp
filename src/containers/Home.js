@@ -14,7 +14,7 @@ let today = new Date();
 
 
 function Home() {
-    const [loading, setLoading] = useState(false);
+    const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
     const [currentPosition, setCurrentPosition] = useState([]);
     let [icon, setIcon] = useState("");
@@ -65,7 +65,7 @@ function Home() {
     }
 
     useEffect(() => {
-        setTimeout(() => setLoading(false), 2400);
+        setTimeout(() => setLoading(false), 3000);
 
         currentPosition.length === 0 ? GetLocation() : false
         currentPosition.length > 1 ? GetData() : false

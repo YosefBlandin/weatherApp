@@ -8,12 +8,23 @@
     height: 100vh;
     width: 100vw;
     transition: 1s;
+    background-color: #2b2121;
     .loadingScreen__circle {
         display: block;
-        width: 100px;
-        height: 100px;
+        width: 50px;
+        height: 50px;
         border-radius: 50%;
-        background: whitesmoke;
-        animation: 2.5s loading;
+        background: #fff4e6;
+        opacity: 0;
+        margin: 20px;
+    }
+    .screen__circle--1 {
+        animation: 0.5s loading forwards 1s;
+    }
+    .screen__circle--2 {
+        animation: 1s loading forwards 1.5s;
+    }
+    .screen__circle--3 {
+        animation: 1.5s loading forwards 2s;
     }
 }
