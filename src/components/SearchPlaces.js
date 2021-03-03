@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from "react"
 import "../styles/components/searchPlaces.scss"
 
-function SearchPlaces({ searchData, city }) {
+function SearchPlaces({ searchData, city, setPosition }) {
     let [value, setValue] = useState("");
 
     useEffect(() => {
         value.length > 3 ? searchData(value) : false
-        console.log(value, city)
     }, [value])
     return (
 
@@ -15,7 +14,7 @@ function SearchPlaces({ searchData, city }) {
             <ul className="searchPlaces__ul">
                 {city.map(e => {
                     return (
-                        <li className="searchPlaces__li" key={e.id}>{e.name}</li>
+                        <li onClick={() => setPosition([e.lat, e.lon])} className="searchPlaces__li" key={e.id}>{e.name}</li>
                     )
                 })}
             </ul>

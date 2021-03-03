@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
-import "../styles/components/nextDays.scss";
+import "../styles/components/NextDays.scss";
 
 function NextDays({ latitude, longitude }) {
     const [dataApi, setDataApi] = useState([])
 
     function getData() {
-        fetch(`http://api.weatherapi.com/v1/forecast.json?key=34b72b35d1bb464990570215212802&q=${latitude},${longitude}&days=5`)
+        fetch(`https://api.weatherapi.com/v1/forecast.json?key=34b72b35d1bb464990570215212802&q=${latitude},${longitude}&days=5`)
             .then(data => data.json())
             .then(data => { setDataApi(data.forecast.forecastday) })
             .catch(err => console.error(err))

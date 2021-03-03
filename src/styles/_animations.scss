@@ -40,7 +40,7 @@ $animationColor: whitesmoke;
         transform: scale(.2);
     }
     100% {
-        box-shadow: 0 0 0 800px $animationColor;
+        box-shadow: 0 0 0 3000px $animationColor;
 
     }
 }
@@ -94,7 +94,7 @@ $animationColor: whitesmoke;
         transform: rotate(360deg);
     }
     90% {
-        box-shadow: 0 0 20px 5px darkorchid;
+        box-shadow: 0 0 20px 5px white;
     }
     100% {
         
@@ -109,7 +109,7 @@ $animationColor: whitesmoke;
         transform: rotate(-660deg);
     }
     90% {
-        box-shadow: 0 0 20px 5px darkblue;
+        box-shadow: 0 0 20px 5px white;
     }
     100% {
 

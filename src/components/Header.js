@@ -3,7 +3,7 @@ import SearchPlaces from "./SearchPlaces";
 
 import "../styles/components/header.scss";
 
-function Header({ getData, searchData, city }) {
+function Header({ getLocation, searchData, city, setPosition }) {
     const [show, showPlaces] = useState(false);
     return (
         <>
@@ -13,14 +13,14 @@ function Header({ getData, searchData, city }) {
                     <div className="closes closes__1"></div>
                     <div className="closes closes__2"></div>
                 </i>
-                <button className="header__location" onClick={() => getData()}>
+                <button className="header__location" onClick={() => getLocation()}>
 
                 </button>
 
             </header>
             {
                 show && (
-                    <SearchPlaces searchData={searchData} city={city} />
+                    <SearchPlaces searchData={searchData} city={city} setPosition={setPosition} />
                 )
             }
         </>

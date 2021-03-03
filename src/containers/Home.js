@@ -5,7 +5,7 @@ import WeatherIcons from "../components/WeatherIcons";
 import NextDays from "../components/NextDays";
 import Highlights from "../components/Highlights";
 
-import AlertGps from "../components/AlertGps";
+import ErrorGps from "../components/ErrorGps";
 
 import "../styles/Home.scss";
 
@@ -14,7 +14,7 @@ let today = new Date();
 
 
 function Home() {
-    const [loading, setLoading] = useState(false);
+    const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
     const [currentPosition, setCurrentPosition] = useState([]);
     let [timezone, setTimezone] = useState("");
@@ -38,8 +38,7 @@ function Home() {
     }
 
     function GetData() {
-
-        fetch(`http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${currentPosition[0]},${currentPosition[1]}`)
+        fetch(`https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${currentPosition[0]},${currentPosition[1]}`)
             .then(data => data.json())
             .then(data => {
                 setTemperature(Math.floor(data.current.temp_c))
@@ -55,7 +54,7 @@ function Home() {
     }
 
     let searchData = (value) => {
-        fetch(`http://api.weatherapi.com/v1/search.json?key=${apiKey}&q=${value}`)
+        fetch(`https://api.weatherapi.com/v1/search.json?key=${apiKey}&q=${value}`)
             .then(data => data.json())
             .then(data => setCity(data))
             .catch(x => setError(x))
@@ -63,7 +62,8 @@ function Home() {
 
     useEffect(() => {
         setTimeout(() => setLoading(false), 2400);
-        currentPosition.length <= 1 ? GetLocation() : false
+
+        currentPosition.length === 0 ? GetLocation() : false
         currentPosition.length > 1 ? GetData() : false
     }, [currentPosition])
     return (
@@ -72,7 +72,7 @@ function Home() {
                 <>
                     <main className="main">
 
-                        <Header getData={() => GetData()} searchData={searchData} city={city} />
+                        <Header getLocation={GetLocation} searchData={searchData} city={city} setPosition={setCurrentPosition} />
 
                         <WeatherIcons weatherState={currentWeather} />
 
@@ -102,7 +102,7 @@ function Home() {
             {
                 error && (
 
-                    < AlertGps error={error} />
+                    < ErrorGps error={error} />
                 )
             }
 

@@ -1,47 +1,59 @@
  @import "../animations";
- .error {
-     position: absolute;
-     display: flex;
-     flex-direction: column;
-     align-items: center;
-     justify-content: center;
-     text-align: center;
-     height: 220px;
-     width: 80vw;
-     left: calc(80vw - 70vw);
-     right: 0;
-     top: calc(70vh - 300px);
-     padding: 30px;
-     font-size: 1.5rem;
-     line-height: 4rem;
-     background: rgba(255,255,255, 1);
-     border-radius: 20px;
-     animation: 1s error forwards;
-     .error__close {
-         position: absolute;
-         top: 0;
-         right: 20px;
-         animation: close 1s infinite;
-     }
-     .close {
-        position: absolute;
-        display: inline-block;
-        top: 35px;
-        right: 5px;
-        width: 35px;
-        border: 2px solid black;
-        cursor: pointer;
-        transition: 1s;
-     }
-     
-     .close__1 {
-         animation: close1 2.5s forwards;
-     }
-     .close__2 {
-        animation: close2 1.5s forwards;
+.error {
+    z-index: 120;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100vh;
+    width: 100vw;
+    .error__container {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        height: 300px;
+        min-width: 310px;
+        max-width: 40%;
+        padding: 30px;
+        font-size: 1.5rem;
+        line-height: 4rem;
+        background: black;
+        border-radius: 20px;
+        animation: 1s error forwards;
+        .error__close {
+            position: absolute;
+            top: 0;
+            right: 20px;
+            animation: close 1s infinite;
+        }
+        .close {
+           position: absolute;
+           display: inline-block;
+           top: 35px;
+           right: 5px;
+           width: 35px;
+           border: 2px solid white;
+           cursor: pointer;
+           transition: 1s;
+        }
+        
+        .close__1 {
+            animation: close1 2.5s forwards;
+        }
+        .close__2 {
+           animation: close2 1.5s forwards;
+       }
+        &__title {
+            margin-top: 30px;
+            font-weight: 900;
+        }
     }
-     &__title {
-         margin-top: 30px;
-         font-weight: 900;
-     }
- }
+   
+}
