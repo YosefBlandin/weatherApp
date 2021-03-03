@@ -20,7 +20,7 @@ function Header({ getLocation, searchData, city, setPosition }) {
             </header>
             {
                 show && (
-                    <SearchPlaces searchData={searchData} city={city} setPosition={setPosition} />
+                    <SearchPlaces searchData={searchData} city={city} setPosition={setPosition} showPlaces={showPlaces} />
                 )
             }
         </>

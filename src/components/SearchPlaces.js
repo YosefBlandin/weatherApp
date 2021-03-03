@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react"
 import "../styles/components/searchPlaces.scss"
 
-function SearchPlaces({ searchData, city, setPosition }) {
+function SearchPlaces({ searchData, city, setPosition, showPlaces }) {
     let [value, setValue] = useState("");
 
     useEffect(() => {
@@ -14,7 +14,10 @@ function SearchPlaces({ searchData, city, setPosition }) {
             <ul className="searchPlaces__ul">
                 {city.map(e => {
                     return (
-                        <li onClick={() => setPosition([e.lat, e.lon])} className="searchPlaces__li" key={e.id}>{e.name}</li>
+                        <li onClick={() => {
+                            setPosition([e.lat, e.lon]);
+                            showPlaces(false);
+                        }} className="searchPlaces__li" key={e.id}>{e.name}</li>
                     )
                 })}
             </ul>
