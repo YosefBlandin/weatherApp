@@ -18,13 +18,12 @@
         align-items: center;
         justify-content: center;
         text-align: center;
-        height: 300px;
-        min-width: 310px;
-        max-width: 40%;
-        padding: 30px;
+        height: 200px;
+        width: 300px;
+        padding: 60px 10px;
         font-size: 1.5rem;
         line-height: 4rem;
-        background: black;
+        background: #3c2f2f;
         border-radius: 20px;
         animation: 1s error forwards;
         .error__close {

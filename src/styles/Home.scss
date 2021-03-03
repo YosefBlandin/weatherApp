@@ -1,5 +1,5 @@
 @import './_animations';
-$font-color: whitesmoke;
+$font-color: whitesmoke; 
 body {
     color: $font-color;
 }
@@ -15,14 +15,15 @@ body {
     min-height: 100vh;
     width: 100vw;
     font-size: 1.2rem;
+    color: #fff4e6;
     animation: entry 0.8s;
-    background-color: #1E213A;
+    background-color: #2b2121;
     padding-bottom: 50px;
     &__icon {
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
-        height: 150px;
+        height: 130px;
         width: 320px;
         margin-bottom: 100px;
         img {
@@ -32,25 +33,29 @@ body {
     &__temperature {
         font-size: 4rem;
     }
-    &__date {
-        text-align: center;
-        line-height: 2rem;
-    }
-    &__timezone {
-        font-weight: bold;
-    }
-    .main__weather {
+    &__weather {
+        font-size: 1.5rem;
+        margin: 30px 0;
         font-weight: 900;
         &::first-letter {
             text-transform: uppercase;
         }
     }
+    &__date {
+        text-align: center;
+        line-height: 2rem;
+        font-weight: 500;
+    }
+    &__timezone {
+        margin-top: 30px;
+        font-weight: bold;
+    }
 }
 footer {
-    background-color: black;
+    background-color: #3c2f2f;
     text-align: center;
     font-weight: bold;
-    color: gray;
+    color:  #d8ccbd;
     grid-row: 3;
     grid-column: 2 / 6;
     width: 100%;

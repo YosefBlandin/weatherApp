@@ -48,12 +48,9 @@ $animationColor: whitesmoke;
     0% {
         transform: translateY(-100vh)
     }
-    90% {
-        box-shadow: 0 0 30px 2px gray;
-    }
     100% {
         transform: translateY(0);
-        box-shadow: 0 0 20px 0 gray;
+        box-shadow: 0 0 20px 0 #fff4e6;
     }
 }
 @keyframes close1 {

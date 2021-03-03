@@ -14,7 +14,7 @@ let today = new Date();
 
 
 function Home() {
-    const [loading, setLoading] = useState(true);
+    const [loading, setLoading] = useState(false);
     const [error, setError] = useState(null);
     const [currentPosition, setCurrentPosition] = useState([]);
     let [icon, setIcon] = useState("");
@@ -26,6 +26,7 @@ function Home() {
     let [visibility, setVisibility] = useState(0);
     let [air_pressure, setAir_Presure] = useState(0);
     let [city, setCity] = useState([]);
+
 
 
     const apiKey = "34b72b35d1bb464990570215212802";

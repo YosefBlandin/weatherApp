@@ -19,7 +19,7 @@ function NextDays({ latitude, longitude }) {
                 return (
                     <article className="NextDays__item" key={element.date}>
                         <p><strong>Day: </strong>{element.date}</p>
-                        <img src={element.day.condition.icon} alt="" />
+                        <img src={element.day.condition.icon.replace("64", "128").replace("64", "128")} alt={element.day.condition.text} />
                         <p>{element.day.condition.text}</p>
                         <div>
                             <p>Min temp: {Math.round(element.day.mintemp_c)}°C</p>

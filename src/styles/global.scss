@@ -5,7 +5,7 @@
     padding: 0;
 }
 html {
-    font-family: sans-serif;
+    font-family: "Roboto", sans-serif;
     
     background-color: black;
     
@@ -46,7 +46,14 @@ html {
                 width: 180px;
                 height: 200px;
             }
-    }   }
+       }
+    }
+    .error {
+        .error__container {
+            width: 400px;
+            height: 250px;
+        }
+    }
 }
 @media screen and (min-width: 1200px) {
     

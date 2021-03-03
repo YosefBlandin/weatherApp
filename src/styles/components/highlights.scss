@@ -1,7 +1,7 @@
 .highlights {
     width: 100%;
     height: auto;
-    background-color: black;
+    background-color: #3c2f2f;
     grid-column: 2 / 6;
     grid-row: 2 ;
     &__title {
@@ -23,7 +23,12 @@
             width: 320px;
             height: 300px;
             text-align: center;
-            background-color: #1E213A;
+            background-color:  #a08266;
+            border-radius: 20px;
+            p {
+                font-weight: 500;
+                font-size: 1.3rem;
+            }
             progress {
                 width: 50%;
 
@@ -32,11 +37,11 @@
                     
                 }
                 &::-webkit-progress-bar {
-                    background: black;
+                    background: #3c2f2f;
                     border-radius: 10px;
                 }
                 &::-webkit-progress-value {
-                    background: cyan;
+                    background: #fff4e6;
                     
                     border-radius: 10px;
                 }
@@ -46,7 +51,7 @@
                 display: flex;
                 align-items: center;
                 span {
-                    font-weight: 100;
+                    font-weight: bold;
                     font-size: 1.5rem;
                     margin-left: 5px;
                 }
