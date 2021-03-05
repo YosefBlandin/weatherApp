@@ -1,9 +1,10 @@
 .highlights {
     width: 100%;
     height: auto;
-    background-color: #3c2f2f;
+    background: rgb(30,60,114);
     grid-column: 2 / 6;
     grid-row: 2 ;
+    animation: entry__layout 2s forwards;
     &__title {
         padding: 40px 0;
         text-align: center;
@@ -23,10 +24,10 @@
             width: 320px;
             height: 300px;
             text-align: center;
-            background-color:  #a08266;
+            background: rgb(35, 68, 129);
             border-radius: 20px;
             p {
-                font-weight: 500;
+                font-weight: bold;
                 font-size: 1.3rem;
             }
             progress {
@@ -37,11 +38,11 @@
                     
                 }
                 &::-webkit-progress-bar {
-                    background: #3c2f2f;
+                    background: rgb(30,60,114);
                     border-radius: 10px;
                 }
                 &::-webkit-progress-value {
-                    background: #fff4e6;
+                    background: #f3558e;
                     
                     border-radius: 10px;
                 }

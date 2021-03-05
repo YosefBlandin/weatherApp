@@ -1,11 +1,23 @@
 $animationColor: whitesmoke;
 
-@keyframes entry {
+@keyframes entry__main {
     from {
         opacity: 0;
+        transform: translateX(-100vw);
     }
     to {
         opacity: 1;
+        transform: translateX(0);
+    }
+}
+@keyframes entry__layout {
+    from {
+        opacity: 0;
+        transform: translateX(100vw);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
     }
 }
 

@@ -8,7 +8,8 @@
     height: 100vh;
     width: 100vw;
     transition: 1s;
-    background-color: #2b2121;
+    background: rgb(30,60,114);
+background: linear-gradient(180deg, rgba(30,60,114,1) 0%, rgba(42,82,152,1) 100%);
     .loadingScreen__circle {
         display: block;
         width: 50px;

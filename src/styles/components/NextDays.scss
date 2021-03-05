@@ -9,9 +9,10 @@
     width: 100%;
     height: 100%;
     justify-content: center;
-    background-color: #3c2f2f;
+    background: rgb(30,60,114);
     grid-column: 2 / 6;
     grid-row: 1;
+    animation: entry__layout 2s forwards;
     .NextDays__item {
         display: flex;
         flex-direction: column;
@@ -21,9 +22,8 @@
         align-items: center;
         width: 320px;
         height: 300px;
-        background-color: #a08266;
+        background: rgb(35, 68, 129);
         border-radius: 20px;
-
         img {
             width: 100px;
         }
