@@ -25,6 +25,9 @@ html {
     }
     .main {
         width: 100%;
+        &__weather {
+            font-size: 1.4rem;
+        }
     }
     .highlights__title {
         text-align: center;
@@ -66,7 +69,7 @@ html {
         padding-left: 40px;
     }
     .NextDays {
-        gap: 15px;
+        gap: 5px;
         .NextDays__item {
             width: 220px;
             height: 280px;
@@ -74,37 +77,39 @@ html {
     }
     .highlights {
         .highlights__container {
-            gap: 15px;
+            gap: 5px;
             .highlights__item {
-                width: 220px;
-                height: 280px;
-            }
-    }   }
-}
-@media screen and (min-width: 1350px) {
-    
-    .highlights__title {
-        padding-top: 20px;
-        padding-bottom: 60px;
-        padding-left: 40px;
-    }
-    .NextDays {
-        gap: 30px;
-        .NextDays__item {
-            width: 300px;
-            height: 280px;
-        }
-    }
-    .highlights {
-        .highlights__container {
-            gap: 30px;
-            .highlights__item {
-                width: 230px;
-                height: 260px;
+                width: 200px;
+                height: 220px;
             }
     }   }
 }
 @media screen and (min-width: 1400px) {
+   
+    .NextDays {
+        gap: 10px;
+        .NextDays__item {
+            width: 270px;
+            height: 280px;
+            animation: 1s entry;
+        }
+    }
+    .highlights__title {
+        padding-top: 20px;
+        padding-bottom: 60px;
+        padding-left: 60px;
+    }
+    .highlights {
+        .highlights__container {
+            gap: 10px;
+            .highlights__item {
+                width: 250px;
+                height: 240px;
+                animation: 1s entry;
+            }
+    }   }
+}
+@media screen and (min-width: 1800px) {
     
     .highlights__title {
         padding-top: 20px;
@@ -114,8 +119,8 @@ html {
     .NextDays {
         gap: 30px;
         .NextDays__item {
-            width: 320px;
-            height: 300px;
+            width: 300px;
+            height: 320px;
             animation: 1s entry;
         }
     }
@@ -123,9 +128,200 @@ html {
         .highlights__container {
             gap: 30px;
             .highlights__item {
-                width: 320px;
-                height: 300px;
+                width: 300px;
+                height: 320px;
                 animation: 1s entry;
             }
     }   }
+}
+@media screen and (min-width: 2500px) {
+
+    header {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        height: 100px;
+        padding: 20px;
+        width: 100%;
+        animation: entry 0.8s;
+        background-color:transparent;
+        .header__places {
+            width: 280px;
+            height: 80px;
+            color: white;
+            font-size: 1.5rem;
+            &--active {
+                position: absolute;
+                z-index: 100;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 150px;
+                height: 100px;    
+                left: 70%;
+                .closes {
+                    position: absolute;
+                    display: inline-block;
+                    top: 45px;
+                    right: 0;
+                    left: 30px;
+                    bottom: 0;
+                    width: 75px;
+                    height: 3px;
+                    border: 3px solid #fff4e6;
+                }
+            }
+        }
+        .header__location {
+            display: inline-block;
+            width: 75px;
+            height: 75px;
+            border: 5px solid white;
+        }
+    }
+    
+
+    .main {
+        font-size: 2rem;
+        &__icon {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            height: 200px;
+            width: 420px;
+            margin-bottom: 200px;
+            img {
+                width: 200px;
+            }
+        }
+        &__temperature {
+            font-size: 6rem;
+        }
+        &__weather {
+            font-size: 2rem;
+            margin: 30px 0;
+            font-weight: 900;
+            &::first-letter {
+                text-transform: uppercase;
+            }
+        }
+        &__date {
+            text-align: center;
+            line-height: 4rem;
+            font-weight: 500;
+        }
+        &__timezone {
+            margin-top: 30px;
+            font-weight: bold;
+        }
+    }
+    .searchPlaces {
+        padding-top: 150px;
+            &__input {
+                font-size: 1.4rem;
+                height: 55px;
+            }
+            &__ul {
+                margin-top: 50px;
+            }
+            &__li {
+                font-size: 1.5rem;
+            }
+        }
+        
+
+    .highlights__title {
+        font-size: 2rem;
+    }
+    .NextDays {
+        gap: 50px;
+        .NextDays__item {
+            width: 440px;
+            height: 480px;
+            animation: 1s entry;
+            p {
+                font-size: 1.5rem;
+            }
+            img {
+                width: 150px;
+            }
+            img + p {
+                font-weight: bold;
+                font-size: 1.8rem;
+            }
+            div > p {
+                margin-top: 20px;
+                font-weight: 500;
+                font-size: 1.5rem;
+            }
+        }
+    }
+    .highlights {
+        .highlights__container {
+            gap: 40px;
+            .highlights__item {
+                width: 400px;
+                height: 420px;
+                animation: 1s entry;
+
+                p {
+                    font-size: 1.8rem;
+                }
+                progress {
+                    width: 70%;
+                    height: 30px;
+                    
+                    &[value] {
+                        background: none;
+                        
+                    }
+                    &::-webkit-progress-bar {
+                        background: rgb(30,60,114);
+                        border-radius: 10px;
+                    }
+                    &::-webkit-progress-value {
+                        background: #f3558e;
+                        
+                        border-radius: 10px;
+                    }
+                }
+            
+                h3 {
+                    display: flex;
+                    align-items: center;
+                    font-size: 1.8rem;
+                    span {
+                        font-weight: bold;
+                        font-size: 1.8rem;
+                        margin-left: 5px;
+                    }
+                    strong {
+                        font-size: 4rem;
+                        font-weight: bold;
+                        }
+                    }  
+                    div {
+                        font-size: 1.7rem;
+                    }            
+                }
+            }
+      }
+      footer {
+            p {
+                font-size: 1.5rem;
+            }
+      }
+      .error {
+          .error__container {
+              height: 350px;
+              width: 500px;
+              font-size: 2.3rem;
+              .close {
+                top: 50px;
+                right: 5px;
+                width: 70px;
+                border: 3px solid white;
+             }
+          }
+      }
 }
