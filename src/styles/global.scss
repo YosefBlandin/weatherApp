@@ -36,7 +36,7 @@ html {
         padding-left: 40px;
     }
     .NextDays {
-        gap: 5px;
+        margin: 5px 0;
         .NextDays__item {
             width: 200px;
             height: 280px;
@@ -44,8 +44,8 @@ html {
     }
     .highlights {
         .highlights__container {
-            gap: 5px;
             .highlights__item {
+                margin: 5px;
                 width: 180px;
                 height: 200px;
             }
@@ -69,16 +69,17 @@ html {
         padding-left: 40px;
     }
     .NextDays {
-        gap: 5px;
         .NextDays__item {
+            margin: 5px;
             width: 220px;
             height: 280px;
+            margin: 5px;
         }
     }
     .highlights {
         .highlights__container {
-            gap: 5px;
-            .highlights__item {
+           .highlights__item {
+                margin: 5px;
                 width: 200px;
                 height: 220px;
             }
@@ -87,8 +88,8 @@ html {
 @media screen and (min-width: 1400px) {
    
     .NextDays {
-        gap: 10px;
         .NextDays__item {
+          margin: 10px;
             width: 270px;
             height: 280px;
             animation: 1s entry;
@@ -101,8 +102,8 @@ html {
     }
     .highlights {
         .highlights__container {
-            gap: 10px;
-            .highlights__item {
+           .highlights__item {
+                margin: 10px;
                 width: 250px;
                 height: 240px;
                 animation: 1s entry;
@@ -117,8 +118,8 @@ html {
         padding-left: 60px;
     }
     .NextDays {
-        gap: 30px;
         .NextDays__item {
+            margin: 30px;
             width: 300px;
             height: 320px;
             animation: 1s entry;
@@ -126,8 +127,8 @@ html {
     }
     .highlights {
         .highlights__container {
-            gap: 30px;
-            .highlights__item {
+             .highlights__item {
+                margin: 30px;
                 width: 300px;
                 height: 320px;
                 animation: 1s entry;
@@ -234,8 +235,8 @@ html {
         font-size: 2rem;
     }
     .NextDays {
-        gap: 50px;
         .NextDays__item {
+            margin: 50px;
             width: 440px;
             height: 480px;
             animation: 1s entry;
@@ -258,8 +259,8 @@ html {
     }
     .highlights {
         .highlights__container {
-            gap: 40px;
             .highlights__item {
+                margin: 40px;
                 width: 400px;
                 height: 420px;
                 animation: 1s entry;
