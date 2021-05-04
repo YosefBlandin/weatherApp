@@ -36,8 +36,8 @@ html {
         padding-left: 40px;
     }
     .NextDays {
-        margin: 5px 0;
-        .NextDays__item {
+       .NextDays__item {
+            margin: 5px auto;
             width: 200px;
             height: 280px;
         }
@@ -45,7 +45,7 @@ html {
     .highlights {
         .highlights__container {
             .highlights__item {
-                margin: 5px;
+                margin: 5px auto;
                 width: 180px;
                 height: 200px;
             }
